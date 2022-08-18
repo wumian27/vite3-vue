@@ -1,0 +1,26 @@
+// 样式常量、方法、工具函数
+// 背景灰
+$bg-gray:  #F7F8FA;
+$bg-blue: #EAF1FF;
+
+$font-blue: #3179FF;
+$font-gray: #727B84;
+$line-gray: #EFEFEF;
+
+@mixin placeholderColor($color: #fff) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: $color;
+  }
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color;
+  }
+}
