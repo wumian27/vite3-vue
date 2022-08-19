@@ -6,3 +6,11 @@
 export interface IHomeState {
   age: number
 }
+
+export interface AgeResult {
+  code: number
+  data: {
+    name: string
+  }
+  msg: string
+}

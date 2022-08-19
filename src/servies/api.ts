@@ -1,6 +1,6 @@
-import axios from 'axios'
-// import { AGetBuilding } from './interface'
+import { AgeResult } from '../store/definition/home'
+import request from './request'
+import { ageUrl } from './apiUrl'
 
-// 获取小区列表
-export const getCityList = <T>(userId: string | number) =>
-  axios.post<T, T>(`app/user/communityInfo?userId=${userId}&`)
+export const getStatusApi = (params: { age: number }): Promise<AgeResult> =>
+  request.get(ageUrl, params)

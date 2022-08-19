@@ -6,7 +6,9 @@ export default [
     response: () => {
       return {
         code: 200,
-        name: 'wujiam',
+        data: {
+          name: 'wujiam'
+        },
         msg: '成功'
       }
     }
@@ -14,10 +16,14 @@ export default [
   {
     url: '/api/menu',
     method: 'get',
-    response: () => ({
-      code: 200,
-      arr: [],
-      msg: '成功'
-    })
+    response: () => {
+      return {
+        code: 200,
+        data: {
+          arr: []
+        },
+        msg: '成功'
+      }
+    }
   }
 ] as MockMethod[]

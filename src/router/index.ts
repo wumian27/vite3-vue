@@ -68,7 +68,7 @@ router.beforeEach(async (to, from, next) => {
   // 当前路由是否存在
   const isMatch = matched.length ? true : false
   // 是否登录  是否拉取menu 有些不需要跳转登录
-  const isLogin = sessionStorage.getItem('auth')
+  const isLogin = sessionStorage.getItem('auth') || true
   // 不需要登录态
   if (['/login', '/404'].includes(path)) {
     next()

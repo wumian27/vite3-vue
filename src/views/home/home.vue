@@ -5,16 +5,15 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
-import axios from 'axios'
+import { getStatusApi } from '../../servies/api'
 export default defineComponent({
   setup() {
     const router = useRouter()
-    const loginOut = () => {
+    const loginOut = async () => {
       // sessionStorage.removeItem('auth')
       // router.push('/login')
-      axios.get('/api/getStatusList').then((res) => {
-        console.log(res.data)
-      })
+      const { data, code, msg } = await getStatusApi({ age: 12 })
+      console.log(data, code, msg)
     }
 
     return {
